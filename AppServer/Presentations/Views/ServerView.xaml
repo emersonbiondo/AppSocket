@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:AppServer.Presentations.ViewModels"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:DataType="vm:ServerViewModel"
+             x:Class="AppServer.Presentations.Views.ServerView"
+             Title="Server">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <HorizontalStackLayout Grid.Row="0" Margin="20">
+            <Label Text="Message List" FontSize="Title"/>
+        </HorizontalStackLayout>
+        <ScrollView Grid.Row="1">
+            <CollectionView ItemsSource="{Binding Server.Messages}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding}"></Label>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AppClient.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:v="clr-namespace:AppClient.Presentations.Views"
+    xmlns:local="clr-namespace:AppClient"
+    Shell.FlyoutBehavior="Disabled"
+    Title="AppClient">
+
+    <ShellContent
+        Title="Client"
+        ContentTemplate="{DataTemplate v:ClientView}"
+        Route="MainPage" />
+
+</Shell>

@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Windows Machine": {
+      "commandName": "MsixPackage",
+      "nativeDebugging": false
+    },
+    "AppClient": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT_DEVELOPMENT": "Development"
+      }
+    }
+  }
+}
